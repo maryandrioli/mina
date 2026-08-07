@@ -148,8 +148,9 @@ p.intro{color:var(--texto);max-width:62em;margin:0 0 22px}
 .encontro.online{background:var(--card-azul);border-left-color:var(--azul)}
 .encontro.extensao{background:var(--card-teal);border-left-color:var(--teal)}
 .encontro.especial{background:var(--card-roxo);border-left-color:var(--roxo)}
-.encontro-topo{display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:space-between;margin-bottom:8px}
-.data{font-size:1.05rem;font-weight:800;color:var(--laranja)}
+.encontro-topo{margin-bottom:9px}
+.etiquetas{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
+.data{display:block;font-size:1.05rem;font-weight:800;color:var(--laranja)}
 .encontro.avaliativa .data{color:var(--rosa)}
 .encontro.online .data{color:var(--azul)}
 .encontro.extensao .data{color:var(--teal)}
@@ -158,15 +159,20 @@ p.intro{color:var(--texto);max-width:62em;margin:0 0 22px}
   font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
   color:#fff;padding:4px 9px;border-radius:4px;
 }
-.tag.presencial{background:var(--azul)}
 .tag.avaliativa{background:var(--rosa)}
-.tag.online{background:var(--azul-claro)}
-.tag.extensao{background:var(--laranja)}
 .tag.curricularizacao{background:var(--teal)}
 .tag.cipatec{background:var(--rosa)}
+.tag.pedagogia{background:var(--azul)}
 .tag.campus{background:var(--roxo)}
 .encontro h4{margin:0 0 8px;font-size:.99rem;font-weight:700;color:var(--texto);line-height:1.4}
 .encontro .meta{font-size:.82rem;color:var(--cinza);font-weight:600;margin:0}
+.encontro h4 a{
+  color:var(--azul);text-decoration:none;
+  border-bottom:2px solid var(--teal);
+  padding-bottom:1px;transition:background .15s,color .15s;
+}
+.encontro h4 a:hover,.encontro h4 a:focus{background:var(--card-teal);color:var(--teal)}
+.encontro h4 a::after{content:" ↗";font-size:.78em;color:var(--teal);border:0}
 
 /* ---------- Tabelas ---------- */
 .tabela-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 0}
@@ -319,7 +325,7 @@ footer strong{color:var(--azul)}
     <span class="selo teal">20 encontros</span>
     <span class="selo laranja">4 aulas semanais</span>
     <span class="selo rosa">63,3 h</span>
-    <span class="selo roxo">Ensino, extensão e PCC</span>
+    <span class="selo roxo">Ensino e extensão</span>
   </div>
 </header>
 
@@ -339,106 +345,95 @@ footer strong{color:var(--azul)}
 <!-- =================== CRONOGRAMA =================== -->
 <section class="painel" id="p-cronograma" role="tabpanel" aria-labelledby="t-cronograma">
   <h2 class="secao">Cronograma: 20 encontros</h2>
-  <p class="intro">Todas as aulas presenciais ocorrem às sextas-feiras (exceto feriados), com 4 aulas de 50 minutos cada, totalizando 200 minutos por encontro.</p>
+  <p class="intro">Todas as aulas presenciais ocorrem às sextas-feiras, exceto feriados, com 4 aulas semanais.</p>
 
   <div class="mes">Julho e agosto</div>
   <div class="grade">
     <article class="encontro presencial">
-      <div class="encontro-topo"><span class="data">31/07 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <div class="encontro-topo"><span class="data">31/07 (sex)</span></div>
       <h4>Encontro 1: abertura e contextualização da disciplina. Vivência de jogo cooperativo: "Saboteur"</h4>
-      <p class="meta">Duração: 200 min</p>
     </article>
     <article class="encontro presencial">
-      <div class="encontro-topo"><span class="data">07/08 (sex)</span><span class="tag presencial">Presencial</span></div>
-      <h4>Encontro 2: reflexões sobre metodologias e aprendizagens em uma perspectiva transformadora</h4>
-      <p class="meta">Duração: 200 min</p>
+      <div class="encontro-topo"><span class="data">07/08 (sex)</span></div>
+      <h4>Encontro 2: reflexões sobre os <a href="https://drive.google.com/drive/folders/12IffoCf3KfMdoUgNBK3l3no4_XTUtRKu?usp=sharing" target="_blank" rel="noopener">materiais</a> e propostas do curso e atividade individual no <a href="https://moodle.srq.ifsp.edu.br/course/view.php?id=3479#section-0" target="_blank" rel="noopener">ambiente Moodle</a></h4>
     </article>
     <article class="encontro presencial">
-      <div class="encontro-topo"><span class="data">14/08 (sex)</span><span class="tag presencial">Presencial</span></div>
-      <h4>Encontro 3: requisitos para inovação; paradigmas contemporâneos de educação</h4>
-      <p class="meta">Duração: 200 min</p>
+      <div class="encontro-topo"><span class="data">14/08 (sex)</span></div>
+      <h4>Encontro 3: paradigmas contemporâneos de educação. Reflexões sobre metodologias e aprendizagens em uma perspectiva transformadora. Vivência prática: aprendizagem criativa</h4>
     </article>
     <article class="encontro presencial">
-      <div class="encontro-topo"><span class="data">21/08 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <div class="encontro-topo"><span class="data">21/08 (sex)</span></div>
       <h4>Encontro 4: mapeamento de experiências inovadoras no Brasil; análise crítica</h4>
-      <p class="meta">Duração: 200 min</p>
     </article>
     <article class="encontro especial">
-      <div class="encontro-topo"><span class="data">25/08 (sáb)</span><span class="tag campus">Campus Aberto</span></div>
+      <div class="encontro-topo"><span class="data">25/08 (sáb)</span><span class="etiquetas"><span class="tag campus">Campus Aberto</span><span class="tag curricularizacao">Curricularização da extensão</span></span></div>
       <h4>Encontros 5 a 8: estudantes propõem e medeiam atividades inovadoras em espaço comunitário</h4>
-      <p class="meta">Duração: 4 aulas</p>
     </article>
   </div>
 
   <div class="mes">Setembro</div>
   <div class="grade">
     <article class="encontro presencial">
-      <div class="encontro-topo"><span class="data">04/09 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <div class="encontro-topo"><span class="data">04/09 (sex)</span></div>
       <h4>Encontro 9: inovação em alfabetização e letramento; educação inclusiva</h4>
-      <p class="meta">Semana 5 &nbsp;·&nbsp; Duração: 200 min</p>
+      <p class="meta">Semana 5</p>
     </article>
     <article class="encontro presencial">
-      <div class="encontro-topo"><span class="data">11/09 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <div class="encontro-topo"><span class="data">11/09 (sex)</span></div>
       <h4>Encontro 10: vivência 1, Design Thinking aplicado à educação</h4>
-      <p class="meta">Semana 6 &nbsp;·&nbsp; Duração: 200 min</p>
+      <p class="meta">Semana 6</p>
     </article>
     <article class="encontro presencial">
-      <div class="encontro-topo"><span class="data">18/09 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <div class="encontro-topo"><span class="data">18/09 (sex)</span></div>
       <h4>Encontro 11: leitura em equipes, análise crítica de referencial teórico e artigos científicos</h4>
-      <p class="meta">Semana 7 &nbsp;·&nbsp; Duração: 200 min</p>
+      <p class="meta">Semana 7</p>
     </article>
     <article class="encontro avaliativa">
-      <div class="encontro-topo"><span class="data">25/09 (sex)</span><span class="tag avaliativa">Avaliativa</span></div>
+      <div class="encontro-topo"><span class="data">25/09 (sex)</span><span class="etiquetas"><span class="tag avaliativa">Avaliativa</span></span></div>
       <h4>Encontro 12: produção escrita individual, reflexão crítica sobre inovação em contexto específico</h4>
-      <p class="meta">Semana 8 &nbsp;·&nbsp; Duração: 200 min</p>
+      <p class="meta">Semana 8</p>
     </article>
   </div>
 
   <div class="mes">Outubro</div>
   <div class="grade">
     <article class="encontro extensao">
-      <div class="encontro-topo"><span class="data">02/10 (sex)</span><span class="tag curricularizacao">Curricularização</span></div>
+      <div class="encontro-topo"><span class="data">02/10 (sex)</span><span class="etiquetas"><span class="tag curricularizacao">Curricularização da extensão</span></span></div>
       <h4>Encontro 13 (extra): visita técnica a escola, identificação e análise de práticas inovadoras</h4>
-      <p class="meta">Duração: 200 min</p>
     </article>
     <article class="encontro extensao">
-      <div class="encontro-topo"><span class="data">02 a 06/10</span><span class="tag extensao">Extensão</span></div>
+      <div class="encontro-topo"><span class="data">02 a 06/10</span><span class="etiquetas"><span class="tag curricularizacao">Curricularização da extensão</span></span></div>
       <h4>Atividade extra durante o dia: curricularização da extensão (visita, observação e análise)</h4>
-      <p class="meta">Duração: 360 min</p>
     </article>
     <article class="encontro presencial">
-      <div class="encontro-topo"><span class="data">09/10 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <div class="encontro-topo"><span class="data">09/10 (sex)</span></div>
       <h4>Encontro 14: vivência 2, aprendizagem cooperativa, gamificação e avaliação formativa</h4>
-      <p class="meta">Duração: 200 min</p>
     </article>
     <article class="encontro especial">
-      <div class="encontro-topo"><span class="data">14 a 18/10</span><span class="tag cipatec">Semana Cipatec</span></div>
+      <div class="encontro-topo"><span class="data">14 a 18/10</span><span class="etiquetas"><span class="tag cipatec">Semana Cipatec</span><span class="tag pedagogia">Semana da Pedagogia</span><span class="tag curricularizacao">Curricularização da extensão</span></span></div>
       <h4>Encontros 15 e 16: palestras, oficinas e mediação de roda de conversa com educadores/as inovadores/as</h4>
-      <p class="meta">Duração: 400 min</p>
     </article>
     <article class="encontro presencial">
-      <div class="encontro-topo"><span class="data">23/10 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <div class="encontro-topo"><span class="data">23/10 (sex)</span></div>
       <h4>Encontro 17: síntese de aprendizagens, indicadores de inovação pedagógica</h4>
-      <p class="meta">Duração: 200 min</p>
     </article>
     <article class="encontro presencial">
-      <div class="encontro-topo"><span class="data">30/10 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <div class="encontro-topo"><span class="data">30/10 (sex)</span></div>
       <h4>Encontro 18: pedagogia de projetos, apresentação de protótipos e ideias iniciais</h4>
-      <p class="meta">Duração: 200 min</p>
     </article>
   </div>
 
   <div class="mes">Novembro</div>
   <div class="grade">
     <article class="encontro online">
-      <div class="encontro-topo"><span class="data">06/11 (sex)</span><span class="tag online">Online</span></div>
+      <div class="encontro-topo"><span class="data">06/11 (sex)</span></div>
       <h4>Encontro 19: seminário online. Apresentação de portfólios e projetos finais (opção A, B ou C)</h4>
-      <p class="meta">Semana 13 &nbsp;·&nbsp; Duração: 200 min</p>
+      <p class="meta">Semana 13</p>
     </article>
     <article class="encontro avaliativa">
-      <div class="encontro-topo"><span class="data">13/11 (sex)</span><span class="tag avaliativa">Avaliativa</span></div>
+      <div class="encontro-topo"><span class="data">13/11 (sex)</span><span class="etiquetas"><span class="tag avaliativa">Avaliativa</span></span></div>
       <h4>Encontro 20: atividade avaliativa coletiva. Síntese, reflexão final e avaliação de pares (online)</h4>
-      <p class="meta">Semana 14 &nbsp;·&nbsp; Duração: 200 min</p>
+      <p class="meta">Semana 14</p>
     </article>
   </div>
 
@@ -450,8 +445,8 @@ footer strong{color:var(--azul)}
         <tr><th scope="col">Categoria</th><th scope="col">Quantidade</th><th scope="col">Observações</th></tr>
       </thead>
       <tbody>
-        <tr><td>Encontros presenciais em sala</td><td class="num">14</td><td>Sextas-feiras regulares (200 min cada, equivalentes a 3 h 20 min)</td></tr>
-        <tr><td>Atividades externas</td><td class="num">3</td><td>Campus Aberto (200 min), visita técnica (200 min), Semana Cipatec e da Pedagogia (400 min)</td></tr>
+        <tr><td>Encontros presenciais em sala</td><td class="num">14</td><td>Sextas-feiras regulares</td></tr>
+        <tr><td>Atividades externas</td><td class="num">3</td><td>Campus Aberto, visita técnica, Semana Cipatec e da Pedagogia</td></tr>
         <tr><td>Encontros online</td><td class="num">2</td><td>Novembro (seminário e avaliação coletiva)</td></tr>
         <tr><td>Atividades avaliativas</td><td class="num">2</td><td>Setembro (produção escrita) e novembro (coletiva)</td></tr>
         <tr class="total"><td>Total</td><td class="num">20</td><td>76 aulas de 50 min, equivalentes a 63,3 h</td></tr>
