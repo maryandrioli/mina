@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Metodologias Inovadoras para a Aprendizagem | Apresentação da disciplina</title>
+<meta name="description" content="Apresentação da disciplina Metodologias Inovadoras para a Aprendizagem: cronograma, atividades avaliativas, projetos finais e referências.">
+<style>
+:root{
+  --azul:#003D82;
+  --azul-claro:#0E5AA8;
+  --teal:#0B8B8B;
+  --rosa:#E91E63;
+  --laranja:#FF9500;
+  --roxo:#6B2C91;
+  --texto:#2C2C2C;
+  --cinza:#666666;
+  --cinza-claro:#E0E0E0;
+  --fundo:#FFFFFF;
+  --fundo-alt:#F6F8FB;
+  --card-azul:#EEF4FB;
+  --card-teal:#E9F6F6;
+  --card-rosa:#FDEEF3;
+  --card-laranja:#FFF6EA;
+  --card-roxo:#F4EEF8;
+  --gradiente:linear-gradient(90deg,#003D82 0%,#0B8B8B 18%,#3C8C71 30%,#CF931B 45%,#FF9500 52%,#F8662B 62%,#E91E63 76%,#9D277F 88%,#6B2C91 100%);
+  --sombra:0 1px 2px rgba(0,61,130,.06),0 4px 16px rgba(0,61,130,.07);
+  --raio:10px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  color:var(--texto);
+  background:var(--fundo);
+  font-size:16px;
+  line-height:1.55;
+}
+.barra-gradiente{height:8px;background:var(--gradiente)}
+
+/* ---------- Cabeçalho ---------- */
+header.capa{
+  padding:34px 20px 26px;
+  max-width:1160px;
+  margin:0 auto;
+  border-bottom:1px solid var(--cinza-claro);
+}
+.capa h1{
+  font-size:clamp(1.6rem,4.6vw,2.6rem);
+  line-height:1.15;
+  color:var(--azul);
+  margin:0 0 10px;
+  font-weight:800;
+  letter-spacing:-.01em;
+}
+.capa .subtitulo{
+  font-size:clamp(.95rem,2.4vw,1.12rem);
+  color:var(--teal);
+  font-weight:600;
+  margin:0 0 18px;
+  max-width:44em;
+}
+.capa .docente{font-size:.95rem;color:var(--texto);margin:0 0 4px;font-weight:600}
+.capa .docente a{color:var(--azul);text-decoration:none}
+.capa .docente a:hover{text-decoration:underline}
+.selos{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.selo{
+  font-size:.76rem;font-weight:700;letter-spacing:.03em;
+  padding:5px 11px;border-radius:999px;color:#fff;text-transform:uppercase;
+}
+.selo.azul{background:var(--azul)}
+.selo.teal{background:var(--teal)}
+.selo.laranja{background:var(--laranja)}
+.selo.rosa{background:var(--rosa)}
+.selo.roxo{background:var(--roxo)}
+
+/* ---------- Abas ---------- */
+nav.abas{
+  position:sticky;top:0;z-index:20;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:saturate(180%) blur(8px);
+  border-bottom:1px solid var(--cinza-claro);
+  box-shadow:0 2px 8px rgba(0,61,130,.05);
+}
+.abas-lista{
+  max-width:1160px;margin:0 auto;
+  display:flex;gap:2px;overflow-x:auto;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  padding:0 8px;
+}
+.abas-lista::-webkit-scrollbar{display:none}
+.aba{
+  flex:0 0 auto;
+  appearance:none;border:0;background:transparent;
+  font-family:inherit;font-size:.92rem;font-weight:700;
+  color:var(--cinza);
+  padding:15px 15px 12px;
+  border-bottom:3px solid transparent;
+  cursor:pointer;white-space:nowrap;
+  transition:color .15s,border-color .15s;
+}
+.aba:hover{color:var(--azul)}
+.aba[aria-selected="true"]{color:var(--azul);border-bottom-color:var(--azul)}
+.aba.destaque[aria-selected="true"]{border-bottom-color:var(--rosa);color:var(--rosa)}
+.aba .marcador{
+  display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:var(--rosa);margin-right:7px;vertical-align:middle;
+}
+
+/* ---------- Painéis ---------- */
+main{max-width:1160px;margin:0 auto;padding:28px 20px 70px}
+.painel[hidden]{display:none}
+.painel{animation:aparece .22s ease}
+@keyframes aparece{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+h2.secao{
+  font-size:clamp(1.25rem,3.4vw,1.75rem);
+  color:var(--azul);font-weight:800;
+  margin:0 0 6px;letter-spacing:-.01em;
+}
+h3.sub{
+  font-size:clamp(1.02rem,2.6vw,1.2rem);
+  color:var(--teal);font-weight:700;margin:34px 0 12px;
+}
+h3.sub.rosa{color:var(--rosa)}
+h3.sub.laranja{color:var(--laranja)}
+h3.sub.roxo{color:var(--roxo)}
+h3.sub.azul{color:var(--azul)}
+p.intro{color:var(--texto);max-width:62em;margin:0 0 22px}
+.mes{
+  font-size:.8rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--laranja);margin:32px 0 12px;display:flex;align-items:center;gap:10px;
+}
+.mes::after{content:"";flex:1;height:1px;background:var(--cinza-claro)}
+
+/* ---------- Cards de encontro ---------- */
+.grade{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.encontro{
+  background:var(--card-laranja);
+  border-left:5px solid var(--laranja);
+  border-radius:0 var(--raio) var(--raio) 0;
+  padding:16px 18px;
+  box-shadow:var(--sombra);
+}
+.encontro.presencial{background:var(--card-laranja);border-left-color:var(--laranja)}
+.encontro.avaliativa{background:var(--card-rosa);border-left-color:var(--rosa)}
+.encontro.online{background:var(--card-azul);border-left-color:var(--azul)}
+.encontro.extensao{background:var(--card-teal);border-left-color:var(--teal)}
+.encontro.especial{background:var(--card-roxo);border-left-color:var(--roxo)}
+.encontro-topo{display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:space-between;margin-bottom:8px}
+.data{font-size:1.05rem;font-weight:800;color:var(--laranja)}
+.encontro.avaliativa .data{color:var(--rosa)}
+.encontro.online .data{color:var(--azul)}
+.encontro.extensao .data{color:var(--teal)}
+.encontro.especial .data{color:var(--roxo)}
+.tag{
+  font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  color:#fff;padding:4px 9px;border-radius:4px;
+}
+.tag.presencial{background:var(--azul)}
+.tag.avaliativa{background:var(--rosa)}
+.tag.online{background:var(--azul-claro)}
+.tag.extensao{background:var(--laranja)}
+.tag.curricularizacao{background:var(--teal)}
+.tag.cipatec{background:var(--rosa)}
+.tag.campus{background:var(--roxo)}
+.encontro h4{margin:0 0 8px;font-size:.99rem;font-weight:700;color:var(--texto);line-height:1.4}
+.encontro .meta{font-size:.82rem;color:var(--cinza);font-weight:600;margin:0}
+
+/* ---------- Tabelas ---------- */
+.tabela-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 0}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.92rem}
+caption{text-align:left;font-size:.82rem;color:var(--cinza);padding-bottom:8px}
+th{
+  background:var(--azul);color:#fff;text-align:left;
+  font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;
+  padding:11px 13px;font-weight:800;
+}
+td{padding:11px 13px;border-bottom:1px solid var(--cinza-claro);vertical-align:top}
+tbody tr:nth-child(even){background:var(--fundo-alt)}
+tbody tr.total td{font-weight:800;color:var(--azul);background:var(--card-azul);border-bottom:0}
+td.num{font-weight:800;color:var(--laranja);white-space:nowrap}
+
+/* ---------- Cards genéricos ---------- */
+.cartoes{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.cartao{
+  background:#fff;border:1px solid var(--cinza-claro);
+  border-radius:var(--raio);padding:20px;box-shadow:var(--sombra);
+}
+.cartao.borda-teal{border-top:4px solid var(--teal)}
+.cartao.borda-rosa{border-top:4px solid var(--rosa)}
+.cartao.borda-laranja{border-top:4px solid var(--laranja)}
+.cartao.borda-azul{border-top:4px solid var(--azul)}
+.cartao.borda-roxo{border-top:4px solid var(--roxo)}
+.cartao h4{margin:0 0 4px;font-size:1.06rem;color:var(--azul);font-weight:800;line-height:1.3}
+.cartao .legenda{font-size:.8rem;color:var(--cinza);font-weight:700;margin:0 0 14px;text-transform:uppercase;letter-spacing:.05em}
+.campo{margin:0 0 12px}
+.campo dt{font-size:.7rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);margin-bottom:3px}
+.campo dd{margin:0;font-size:.93rem}
+.cartao.borda-rosa .campo dt{color:var(--rosa)}
+.cartao.borda-laranja .campo dt{color:var(--laranja)}
+.cartao.borda-roxo .campo dt{color:var(--roxo)}
+
+/* ---------- Destaque ---------- */
+.destaque-bloco{
+  background:var(--card-teal);border-left:5px solid var(--teal);
+  border-radius:0 var(--raio) var(--raio) 0;padding:20px 22px;margin:0 0 8px;
+  font-size:1.02rem;font-weight:600;color:var(--azul);
+}
+.aviso{
+  background:var(--card-rosa);border-left:5px solid var(--rosa);
+  border-radius:0 var(--raio) var(--raio) 0;padding:14px 18px;margin:14px 0 0;font-size:.92rem;
+}
+.aviso strong{color:var(--rosa)}
+
+/* ---------- Listas ---------- */
+ul.marcada{list-style:none;padding:0;margin:0}
+ul.marcada li{position:relative;padding-left:20px;margin-bottom:9px;font-size:.94rem}
+ul.marcada li::before{
+  content:"";position:absolute;left:0;top:.52em;
+  width:7px;height:7px;background:var(--teal);border-radius:2px;
+}
+ul.marcada.rosa li::before{background:var(--rosa)}
+ul.marcada.laranja li::before{background:var(--laranja)}
+ul.marcada.azul li::before{background:var(--azul)}
+ul.marcada.roxo li::before{background:var(--roxo)}
+
+/* ---------- Numerados ---------- */
+.numerados{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.item-num{display:flex;gap:13px;align-items:flex-start}
+.item-num .n{
+  flex:0 0 auto;font-size:1.5rem;font-weight:800;line-height:1;color:var(--teal);
+  min-width:1.7em;
+}
+.item-num:nth-child(6n+2) .n{color:var(--laranja)}
+.item-num:nth-child(6n+3) .n{color:var(--rosa)}
+.item-num:nth-child(6n+4) .n{color:var(--azul)}
+.item-num:nth-child(6n+5) .n{color:var(--roxo)}
+.item-num:nth-child(6n+6) .n{color:var(--teal)}
+.item-num h4{margin:0 0 5px;font-size:1rem;color:var(--azul);font-weight:700}
+.item-num p{margin:0;font-size:.9rem;color:var(--texto)}
+
+/* ---------- Números-chave ---------- */
+.numeros{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.numero{
+  background:var(--fundo-alt);border-radius:var(--raio);padding:16px 18px;
+  border:1px solid var(--cinza-claro);
+}
+.numero dt{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--azul);margin-bottom:4px}
+.numero dd{margin:0;font-size:1.28rem;font-weight:800;color:var(--texto);line-height:1.25}
+.numero dd small{display:block;font-size:.8rem;font-weight:600;color:var(--cinza);margin-top:2px}
+
+/* ---------- Opções de projeto ---------- */
+.opcoes{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.opcao{
+  border:1px solid var(--cinza-claro);border-radius:var(--raio);
+  padding:20px;box-shadow:var(--sombra);text-align:left;
+}
+.opcao .letra{font-size:2.4rem;font-weight:800;line-height:1;margin-bottom:8px}
+.opcao.a{background:var(--card-teal)} .opcao.a .letra{color:var(--teal)}
+.opcao.b{background:var(--card-laranja)} .opcao.b .letra{color:var(--laranja)}
+.opcao.c{background:var(--card-rosa)} .opcao.c .letra{color:var(--rosa)}
+.opcao h4{margin:0;font-size:1.02rem;color:var(--azul);font-weight:800}
+
+/* ---------- Duas colunas ---------- */
+.duas{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.tres{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+
+/* ---------- Referências ---------- */
+ol.refs{padding-left:0;list-style:none;margin:0;counter-reset:r}
+ol.refs li{
+  font-size:.9rem;margin-bottom:14px;padding-left:20px;position:relative;line-height:1.5;
+}
+ol.refs li::before{
+  content:"";position:absolute;left:0;top:.5em;width:7px;height:7px;
+  background:var(--azul);border-radius:2px;
+}
+ol.refs strong{color:var(--azul)}
+ol.refs a{color:var(--teal);word-break:break-word}
+
+footer{
+  border-top:1px solid var(--cinza-claro);
+  padding:24px 20px 40px;max-width:1160px;margin:0 auto;
+  font-size:.85rem;color:var(--cinza);
+}
+footer strong{color:var(--azul)}
+
+/* ---------- Celular ---------- */
+@media (max-width:640px){
+  body{font-size:15px}
+  header.capa{padding:24px 16px 20px}
+  main{padding:22px 16px 60px}
+  .aba{padding:13px 12px 10px;font-size:.86rem}
+  .grade,.cartoes,.opcoes{grid-template-columns:1fr}
+  .encontro{padding:14px 15px}
+  .destaque-bloco{padding:16px 17px;font-size:.97rem}
+  table{min-width:440px;font-size:.85rem}
+  th,td{padding:9px 10px}
+  .tabela-wrap::after{content:"";display:block}
+}
+@media print{
+  nav.abas{display:none}
+  .painel[hidden]{display:block!important}
+  .encontro,.cartao{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="barra-gradiente"></div>
+
+<header class="capa">
+  <h1>Metodologias inovadoras para a aprendizagem</h1>
+  <p class="subtitulo">Transformando a educação por meio da colaboração, da criatividade e do protagonismo estudantil.</p>
+  <p class="docente">Profa. Mary Grace Pereira Andrioli &nbsp;·&nbsp; <a href="mailto:maryg@ifsp.edu.br">maryg@ifsp.edu.br</a></p>
+  <div class="selos">
+    <span class="selo azul">31/07/2026 a 13/11/2026</span>
+    <span class="selo teal">20 encontros</span>
+    <span class="selo laranja">4 aulas semanais</span>
+    <span class="selo rosa">63,3 h</span>
+    <span class="selo roxo">Ensino, extensão e PCC</span>
+  </div>
+</header>
+
+<nav class="abas" aria-label="Seções da disciplina">
+  <div class="abas-lista" role="tablist">
+    <button class="aba destaque" role="tab" id="t-cronograma" aria-controls="p-cronograma" aria-selected="true"><span class="marcador"></span>Cronograma semanal</button>
+    <button class="aba destaque" role="tab" id="t-avaliacao" aria-controls="p-avaliacao" aria-selected="false"><span class="marcador"></span>Avaliação</button>
+    <button class="aba" role="tab" id="t-projetos" aria-controls="p-projetos" aria-selected="false">Projetos finais</button>
+    <button class="aba" role="tab" id="t-disciplina" aria-controls="p-disciplina" aria-selected="false">A disciplina</button>
+    <button class="aba" role="tab" id="t-metodologias" aria-controls="p-metodologias" aria-selected="false">Metodologias e temas</button>
+    <button class="aba" role="tab" id="t-referencias" aria-controls="p-referencias" aria-selected="false">Referências</button>
+  </div>
+</nav>
+
+<main>
+
+<!-- =================== CRONOGRAMA =================== -->
+<section class="painel" id="p-cronograma" role="tabpanel" aria-labelledby="t-cronograma">
+  <h2 class="secao">Cronograma: 20 encontros</h2>
+  <p class="intro">Todas as aulas presenciais ocorrem às sextas-feiras (exceto feriados), com 4 aulas de 50 minutos cada, totalizando 200 minutos por encontro.</p>
+
+  <div class="mes">Julho e agosto</div>
+  <div class="grade">
+    <article class="encontro presencial">
+      <div class="encontro-topo"><span class="data">31/07 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <h4>Encontro 1: abertura e contextualização da disciplina. Vivência de jogo cooperativo: "Saboteur"</h4>
+      <p class="meta">Duração: 200 min</p>
+    </article>
+    <article class="encontro presencial">
+      <div class="encontro-topo"><span class="data">07/08 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <h4>Encontro 2: reflexões sobre metodologias e aprendizagens em uma perspectiva transformadora</h4>
+      <p class="meta">Duração: 200 min</p>
+    </article>
+    <article class="encontro presencial">
+      <div class="encontro-topo"><span class="data">14/08 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <h4>Encontro 3: requisitos para inovação; paradigmas contemporâneos de educação</h4>
+      <p class="meta">Duração: 200 min</p>
+    </article>
+    <article class="encontro presencial">
+      <div class="encontro-topo"><span class="data">21/08 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <h4>Encontro 4: mapeamento de experiências inovadoras no Brasil; análise crítica</h4>
+      <p class="meta">Duração: 200 min</p>
+    </article>
+    <article class="encontro especial">
+      <div class="encontro-topo"><span class="data">25/08 (sáb)</span><span class="tag campus">Campus Aberto</span></div>
+      <h4>Encontros 5 a 8: estudantes propõem e medeiam atividades inovadoras em espaço comunitário</h4>
+      <p class="meta">Duração: 4 aulas</p>
+    </article>
+  </div>
+
+  <div class="mes">Setembro</div>
+  <div class="grade">
+    <article class="encontro presencial">
+      <div class="encontro-topo"><span class="data">04/09 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <h4>Encontro 9: inovação em alfabetização e letramento; educação inclusiva</h4>
+      <p class="meta">Semana 5 &nbsp;·&nbsp; Duração: 200 min</p>
+    </article>
+    <article class="encontro presencial">
+      <div class="encontro-topo"><span class="data">11/09 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <h4>Encontro 10: vivência 1, Design Thinking aplicado à educação</h4>
+      <p class="meta">Semana 6 &nbsp;·&nbsp; Duração: 200 min</p>
+    </article>
+    <article class="encontro presencial">
+      <div class="encontro-topo"><span class="data">18/09 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <h4>Encontro 11: leitura em equipes, análise crítica de referencial teórico e artigos científicos</h4>
+      <p class="meta">Semana 7 &nbsp;·&nbsp; Duração: 200 min</p>
+    </article>
+    <article class="encontro avaliativa">
+      <div class="encontro-topo"><span class="data">25/09 (sex)</span><span class="tag avaliativa">Avaliativa</span></div>
+      <h4>Encontro 12: produção escrita individual, reflexão crítica sobre inovação em contexto específico</h4>
+      <p class="meta">Semana 8 &nbsp;·&nbsp; Duração: 200 min</p>
+    </article>
+  </div>
+
+  <div class="mes">Outubro</div>
+  <div class="grade">
+    <article class="encontro extensao">
+      <div class="encontro-topo"><span class="data">02/10 (sex)</span><span class="tag curricularizacao">Curricularização</span></div>
+      <h4>Encontro 13 (extra): visita técnica a escola, identificação e análise de práticas inovadoras</h4>
+      <p class="meta">Duração: 200 min</p>
+    </article>
+    <article class="encontro extensao">
+      <div class="encontro-topo"><span class="data">02 a 06/10</span><span class="tag extensao">Extensão</span></div>
+      <h4>Atividade extra durante o dia: curricularização da extensão (visita, observação e análise)</h4>
+      <p class="meta">Duração: 360 min</p>
+    </article>
+    <article class="encontro presencial">
+      <div class="encontro-topo"><span class="data">09/10 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <h4>Encontro 14: vivência 2, aprendizagem cooperativa, gamificação e avaliação formativa</h4>
+      <p class="meta">Duração: 200 min</p>
+    </article>
+    <article class="encontro especial">
+      <div class="encontro-topo"><span class="data">14 a 18/10</span><span class="tag cipatec">Semana Cipatec</span></div>
+      <h4>Encontros 15 e 16: palestras, oficinas e mediação de roda de conversa com educadores/as inovadores/as</h4>
+      <p class="meta">Duração: 400 min</p>
+    </article>
+    <article class="encontro presencial">
+      <div class="encontro-topo"><span class="data">23/10 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <h4>Encontro 17: síntese de aprendizagens, indicadores de inovação pedagógica</h4>
+      <p class="meta">Duração: 200 min</p>
+    </article>
+    <article class="encontro presencial">
+      <div class="encontro-topo"><span class="data">30/10 (sex)</span><span class="tag presencial">Presencial</span></div>
+      <h4>Encontro 18: pedagogia de projetos, apresentação de protótipos e ideias iniciais</h4>
+      <p class="meta">Duração: 200 min</p>
+    </article>
+  </div>
+
+  <div class="mes">Novembro</div>
+  <div class="grade">
+    <article class="encontro online">
+      <div class="encontro-topo"><span class="data">06/11 (sex)</span><span class="tag online">Online</span></div>
+      <h4>Encontro 19: seminário online. Apresentação de portfólios e projetos finais (opção A, B ou C)</h4>
+      <p class="meta">Semana 13 &nbsp;·&nbsp; Duração: 200 min</p>
+    </article>
+    <article class="encontro avaliativa">
+      <div class="encontro-topo"><span class="data">13/11 (sex)</span><span class="tag avaliativa">Avaliativa</span></div>
+      <h4>Encontro 20: atividade avaliativa coletiva. Síntese, reflexão final e avaliação de pares (online)</h4>
+      <p class="meta">Semana 14 &nbsp;·&nbsp; Duração: 200 min</p>
+    </article>
+  </div>
+
+  <h3 class="sub azul">Distribuição de encontros</h3>
+  <div class="tabela-wrap">
+    <table>
+      <caption>Deslize a tabela na horizontal para ver todas as colunas.</caption>
+      <thead>
+        <tr><th scope="col">Categoria</th><th scope="col">Quantidade</th><th scope="col">Observações</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Encontros presenciais em sala</td><td class="num">14</td><td>Sextas-feiras regulares (200 min cada, equivalentes a 3 h 20 min)</td></tr>
+        <tr><td>Atividades externas</td><td class="num">3</td><td>Campus Aberto (200 min), visita técnica (200 min), Semana Cipatec e da Pedagogia (400 min)</td></tr>
+        <tr><td>Encontros online</td><td class="num">2</td><td>Novembro (seminário e avaliação coletiva)</td></tr>
+        <tr><td>Atividades avaliativas</td><td class="num">2</td><td>Setembro (produção escrita) e novembro (coletiva)</td></tr>
+        <tr class="total"><td>Total</td><td class="num">20</td><td>76 aulas de 50 min, equivalentes a 63,3 h</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- =================== AVALIAÇÃO =================== -->
+<section class="painel" id="p-avaliacao" role="tabpanel" aria-labelledby="t-avaliacao" hidden>
+  <h2 class="secao">Atividades avaliativas</h2>
+  <p class="intro">O processo avaliativo combina três componentes: duas atividades formais, o portfólio construído ao longo de toda a disciplina e o projeto final apresentado em novembro.</p>
+
+  <div class="cartoes">
+    <article class="cartao borda-teal">
+      <h4>Produção escrita</h4>
+      <p class="legenda">Setembro</p>
+      <dl>
+        <div class="campo"><dt>Data</dt><dd>25/09</dd></div>
+        <div class="campo"><dt>Formato</dt><dd>Individual</dd></div>
+        <div class="campo"><dt>Objetivo</dt><dd>Reflexão crítica e fundamentada sobre inovação em contexto educacional específico.</dd></div>
+        <div class="campo"><dt>Produtos esperados</dt><dd>Ensaio ou relatório crítico (3 a 5 páginas).</dd></div>
+        <div class="campo"><dt>Critérios</dt><dd>Fundamentação teórica, análise crítica, clareza argumentativa e articulação com as leituras da disciplina.</dd></div>
+      </dl>
+    </article>
+    <article class="cartao borda-rosa">
+      <h4>Atividade avaliativa coletiva</h4>
+      <p class="legenda">Novembro</p>
+      <dl>
+        <div class="campo"><dt>Data</dt><dd>13/11</dd></div>
+        <div class="campo"><dt>Formato</dt><dd>Coletivo e participativo</dd></div>
+        <div class="campo"><dt>Objetivo</dt><dd>Síntese de aprendizagens, reflexão final e avaliação de pares.</dd></div>
+        <div class="campo"><dt>Produtos esperados</dt><dd>Discussão facilitada, apresentação de portfólio e feedback entre estudantes.</dd></div>
+        <div class="campo"><dt>Critérios</dt><dd>Participação, qualidade do portfólio, capacidade de síntese e reflexão crítica.</dd></div>
+      </dl>
+    </article>
+  </div>
+
+  <h3 class="sub azul">Processo avaliativo e portfólio</h3>
+  <p class="intro">Os estudantes construirão um repertório e um portfólio reflexivo, autoral e integrado, contendo:</p>
+  <div class="duas">
+    <ul class="marcada">
+      <li>Síntese de teorias e aprendizagens sobre metodologias e educação inovadora, com ênfase em abordagens que priorizam a aprendizagem.</li>
+      <li>Discussão crítica sobre paradigmas de educação, incluindo perspectivas matéticas e transformadoras.</li>
+      <li>Referencial crítico sobre inovação em educação (livros, artigos científicos e práticas documentadas).</li>
+      <li>Mapeamento de experiências inovadoras no Brasil e no mundo, com análise crítica de contextos e resultados.</li>
+      <li>Categorização de práticas docentes inovadoras (Brasil e mundo) segundo critérios de inclusão, criatividade e transformação.</li>
+    </ul>
+    <ul class="marcada laranja">
+      <li>Identificação de dispositivos de inovação pedagógica (recursos, estratégias, tecnologias e abordagens matéticas).</li>
+      <li>Propostas de práticas inovadoras em alfabetização e letramento (múltiplas faixas etárias e contextos).</li>
+      <li>Indicadores e critérios para avaliar práticas inovadoras (inclusivas, antirracistas, acessíveis, criativas e transformadoras).</li>
+      <li>Projeto final: uma das três opções descritas na seção "Projetos finais".</li>
+    </ul>
+  </div>
+
+  <div class="aviso">
+    <strong>Formato do portfólio:</strong> poderá ser digital, em qualquer plataforma escolhida, e/ou impresso. Deverá ser individual, podendo conter algumas propostas construídas em conjunto, com menção a todas as pessoas autoras envolvidas.
+  </div>
+</section>
+
+<!-- =================== PROJETOS FINAIS =================== -->
+<section class="painel" id="p-projetos" role="tabpanel" aria-labelledby="t-projetos" hidden>
+  <h2 class="secao">Projetos finais</h2>
+  <p class="intro">Os estudantes deverão escolher uma das três opções de projeto final, a ser apresentada no seminário online (06/11) e na atividade avaliativa coletiva (13/11).</p>
+
+  <div class="opcoes">
+    <article class="opcao a"><div class="letra">A</div><h4>Artigo científico</h4></article>
+    <article class="opcao b"><div class="letra">B</div><h4>Desenvolvimento de aplicativo (Campus Mobile)</h4></article>
+    <article class="opcao c"><div class="letra">C</div><h4>Material pedagógico e metodologia inovadora</h4></article>
+  </div>
+
+  <h3 class="sub">Opção A: artigo científico</h3>
+  <div class="destaque-bloco">Produção de artigo científico fundamentado em experiência pedagógica implementada, articulando inovação com um dos temas trabalhados no curso.</div>
+  <div class="tres">
+    <div>
+      <h3 class="sub azul">Estrutura esperada</h3>
+      <ul class="marcada azul">
+        <li>Introdução (contextualização e problema)</li>
+        <li>Revisão de literatura (mínimo de 8 a 10 referências científicas)</li>
+        <li>Descrição da experiência implementada</li>
+        <li>Análise crítica à luz da teoria</li>
+        <li>Resultados e discussão</li>
+        <li>Conclusões e implicações pedagógicas</li>
+        <li>Referências</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sub laranja">Temas possíveis</h3>
+      <ul class="marcada laranja">
+        <li>Jogos e gamificação</li>
+        <li>Alfabetização e letramento inovadores</li>
+        <li>Educação inclusiva</li>
+        <li>Aprendizagem criativa</li>
+        <li>Avaliação formativa</li>
+        <li>Pedagogia de projetos</li>
+        <li>Aprendizagem cooperativa</li>
+        <li>Abordagens matéticas</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sub rosa">Critérios de avaliação</h3>
+      <ul class="marcada rosa">
+        <li>Rigor científico e fundamentação teórica</li>
+        <li>Originalidade e relevância da experiência</li>
+        <li>Qualidade da análise crítica</li>
+        <li>Clareza e estrutura do texto</li>
+        <li>Adequação às normas de citação</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub">Opção B: desenvolvimento de aplicativo</h3>
+  <div class="destaque-bloco">Constituição de equipe para desenvolver aplicativo relacionado a inovação em educação, com possibilidade de participação no Campus Mobile (evento de inovação e empreendedorismo).</div>
+  <div class="tres">
+    <div>
+      <h3 class="sub azul">Características do projeto</h3>
+      <ul class="marcada azul">
+        <li>Problema educacional identificado e justificado</li>
+        <li>Solução inovadora em formato de aplicativo (web ou móvel)</li>
+        <li>Prototipagem funcional</li>
+        <li>Plano de negócio ou modelo de sustentabilidade</li>
+        <li>Apresentação em formato de pitch (máximo de 5 minutos)</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sub laranja">Exemplos</h3>
+      <ul class="marcada laranja">
+        <li>Plataforma de gamificação para alfabetização</li>
+        <li>Ferramenta de avaliação formativa colaborativa</li>
+        <li>Aplicativo de pedagogia de projetos com gestão de equipes</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sub rosa">Critérios de avaliação</h3>
+      <ul class="marcada rosa">
+        <li>Inovação e relevância do problema</li>
+        <li>Viabilidade técnica e funcional</li>
+        <li>Qualidade da prototipagem</li>
+        <li>Apresentação e comunicação</li>
+        <li>Potencial de impacto educacional</li>
+      </ul>
+    </div>
+  </div>
+  <div class="aviso">
+    <strong>Pontos adicionais:</strong> equipes que participarem do Campus Mobile receberão pontuação adicional na disciplina, em reconhecimento ao engajamento em contexto extensionista de maior visibilidade.
+  </div>
+
+  <h3 class="sub">Opção C: material pedagógico e metodologia</h3>
+  <div class="destaque-bloco">Desenvolvimento de material pedagógico inovador articulado com metodologia específica, incluindo página web de divulgação e testes iniciais validados.</div>
+  <div class="tres">
+    <div>
+      <h3 class="sub azul">Componentes do projeto</h3>
+      <ul class="marcada azul">
+        <li>Material pedagógico (sequência didática, jogo, recurso digital ou módulo)</li>
+        <li>Fundamentação metodológica</li>
+        <li>Página web de divulgação</li>
+        <li>Testes iniciais com grupo piloto</li>
+        <li>Relatório de validação</li>
+      </ul>
+      <h3 class="sub laranja">Exemplos de materiais</h3>
+      <ul class="marcada laranja">
+        <li>Sequência didática de alfabetização matética</li>
+        <li>Jogo educacional para educação inclusiva</li>
+        <li>Recurso digital de aprendizagem criativa</li>
+        <li>Módulo de avaliação formativa gamificada</li>
+        <li>Kit de pedagogia de projetos para educadores</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sub roxo">Estrutura esperada</h3>
+      <ul class="marcada roxo">
+        <li>Introdução e justificativa</li>
+        <li>Descrição detalhada do material e da metodologia</li>
+        <li>Fundamentação teórica</li>
+        <li>Página web (com capturas de tela e link)</li>
+        <li>Relato de testes iniciais e feedback</li>
+        <li>Análise crítica e melhorias propostas</li>
+        <li>Referências</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sub rosa">Critérios de avaliação</h3>
+      <ul class="marcada rosa">
+        <li>Inovação e criatividade do material</li>
+        <li>Fundamentação metodológica sólida</li>
+        <li>Qualidade da página web e da apresentação</li>
+        <li>Rigor dos testes iniciais</li>
+        <li>Potencial de replicabilidade e impacto</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =================== A DISCIPLINA =================== -->
+<section class="painel" id="p-disciplina" role="tabpanel" aria-labelledby="t-disciplina" hidden>
+  <h2 class="secao">Síntese</h2>
+  <p class="intro">A disciplina Metodologias Inovadoras capacita estudantes a compreender, implementar e avaliar práticas pedagógicas contemporâneas que colocam o aluno como protagonista do processo de aprendizagem. O componente curricular articula teoria, vivências práticas e atividades extensionistas para preparar educadores capazes de transformar ambientes educacionais por meio de inovação, colaboração, pensamento crítico e abordagens matéticas que promovem aprendizagem significativa e autônoma.</p>
+
+  <h3 class="sub azul">Informações gerais</h3>
+  <dl class="numeros">
+    <div class="numero"><dt>Docentes</dt><dd>1</dd></div>
+    <div class="numero"><dt>Aulas semanais</dt><dd>4<small>50 minutos cada</small></dd></div>
+    <div class="numero"><dt>Total de aulas</dt><dd>76</dd></div>
+    <div class="numero"><dt>Carga horária (ensino)</dt><dd>53,3 h</dd></div>
+    <div class="numero"><dt>Carga horária (extensão)</dt><dd>10 h</dd></div>
+    <div class="numero"><dt>Carga horária (PCC)</dt><dd>10 h</dd></div>
+    <div class="numero"><dt>Carga horária total</dt><dd>63,3 h</dd></div>
+    <div class="numero"><dt>Duração</dt><dd>20<small>encontros em 20 semanas</small></dd></div>
+    <div class="numero"><dt>Período</dt><dd>31/07/2026<small>a 13/11/2026</small></dd></div>
+  </dl>
+
+  <h3 class="sub">Objetivo geral</h3>
+  <div class="destaque-bloco">Desenvolver competências e habilidades para compreender, analisar criticamente, implementar e avaliar metodologias inovadoras em contextos educacionais, promovendo transformação pedagógica fundamentada em princípios de protagonismo estudantil, colaboração, pensamento crítico e abordagens matéticas.</div>
+
+  <h3 class="sub azul">Objetivos específicos</h3>
+  <div class="numerados">
+    <div class="item-num"><div class="n">1</div><div><h4>Compreender</h4><p>Compreender a importância e os fundamentos teóricos das metodologias inovadoras como ferramentas para promover protagonismo, colaboração, aprendizagem autônoma e cooperativa, considerando especialmente abordagens matéticas que valorizam o aprender a aprender.</p></div></div>
+    <div class="item-num"><div class="n">2</div><div><h4>Analisar criticamente</h4><p>Analisar criticamente o conceito de inovação em educação, identificando requisitos essenciais, diferenciando inovação genuína da banalização do termo e reconhecendo como a inovação se articula com transformação social e desenvolvimento de competências contemporâneas.</p></div></div>
+    <div class="item-num"><div class="n">3</div><div><h4>Refletir</h4><p>Refletir sobre inovação e assertividade como estímulos ao pensamento crítico, à criatividade e à resolução de problemas, capacitando os estudantes a propor novas ideias e melhorias em sistemas, produtos e instituições educacionais.</p></div></div>
+    <div class="item-num"><div class="n">4</div><div><h4>Identificar e categorizar</h4><p>Identificar e categorizar práticas docentes inovadoras no Brasil e no mundo, reconhecendo dispositivos pedagógicos que operacionalizam inovação (recursos, estratégias e metodologias específicas).</p></div></div>
+    <div class="item-num"><div class="n">5</div><div><h4>Desenvolver e criar</h4><p>Desenvolver e criar estratégias e metodologias inovadoras em contextos específicos, especialmente em alfabetização e letramento (crianças, recomposição de aprendizagens, jovens e adultos), educação inclusiva, avaliação formativa e aprendizagem criativa.</p></div></div>
+    <div class="item-num"><div class="n">6</div><div><h4>Avaliar</h4><p>Desenvolver indicadores e critérios para avaliar práticas pedagógicas inovadoras, considerando dimensões de inclusão, antirracismo, acessibilidade, criatividade e transformação social.</p></div></div>
+    <div class="item-num"><div class="n">7</div><div><h4>Integrar</h4><p>Integrar perspectivas matéticas e paradigmas contemporâneos de educação, superando abordagens tradicionais e reconhecendo a educação como processo contínuo de aprendizagem e transformação.</p></div></div>
+    <div class="item-num"><div class="n">8</div><div><h4>Posicionar-se</h4><p>Posicionar-se criticamente e como agente de mudança, cultivando abertura à inovação, flexibilidade, adaptabilidade e desenvolvimento de competências necessárias ao sucesso pessoal, profissional e social dos educandos.</p></div></div>
+  </div>
+
+  <h3 class="sub rosa">Notas finais</h3>
+  <ul class="marcada rosa">
+    <li>Todas as aulas presenciais ocorrem às sextas-feiras (exceto feriados), com 4 aulas de 50 minutos cada, totalizando 200 minutos por encontro.</li>
+    <li>A disciplina integra ensino, extensão e prática como componente curricular (PCC).</li>
+    <li>O portfólio construído ao longo da disciplina constitui produto avaliativo contínuo.</li>
+    <li>Abordagens matéticas (aprender a aprender, autonomia e responsabilidade) permeiam toda a proposta.</li>
+    <li>O protagonismo estudantil é central em todas as atividades, especialmente no Campus Aberto, na Semana da Pedagogia e nos projetos finais.</li>
+    <li>O mês de novembro é dedicado a atividades online e à finalização dos projetos finais.</li>
+    <li>Os projetos finais oferecem flexibilidade para que os estudantes escolham o formato alinhado a seus interesses: pesquisa, empreendedorismo ou desenvolvimento de recursos.</li>
+    <li>A participação no Campus Mobile (opção B) oferece oportunidade de pontuação adicional e visibilidade extensionista.</li>
+  </ul>
+</section>
+
+<!-- =================== METODOLOGIAS =================== -->
+<section class="painel" id="p-metodologias" role="tabpanel" aria-labelledby="t-metodologias" hidden>
+  <h2 class="secao">Metodologias e vivências</h2>
+  <p class="intro">As aulas alternam entre exposição dialogada, leitura colaborativa, vivências práticas e abordagens matéticas que promovem a construção autônoma do conhecimento.</p>
+
+  <div class="numerados">
+    <div class="item-num"><div class="n">01</div><div><h4>Leitura em equipes</h4><p>Grupos preparam análise crítica de livros e artigos e trocam com outros grupos, sistematizando percepções e discutindo interpretações divergentes.</p></div></div>
+    <div class="item-num"><div class="n">02</div><div><h4>Análise de periódicos</h4><p>Discussão de artigos científicos, perfis online, inovações em alfabetização, gamificação, educação inclusiva e avaliação formativa.</p></div></div>
+    <div class="item-num"><div class="n">03</div><div><h4>Rodas de conversa</h4><p>Mediação com educadores/as inovadores/as da educação brasileira, permitindo diálogo direto sobre desafios e possibilidades.</p></div></div>
+    <div class="item-num"><div class="n">04</div><div><h4>Vivências práticas</h4><p>Aprendizagem cooperativa, Design Thinking, aprendizagem criativa, gamificação, pedagogia de projetos e abordagens matéticas.</p></div></div>
+    <div class="item-num"><div class="n">05</div><div><h4>Hackathons e prototipagem</h4><p>Transformação de ideias em produtos educacionais, com foco em viabilidade e impacto.</p></div></div>
+    <div class="item-num"><div class="n">06</div><div><h4>Seminários e apresentações</h4><p>Socialização de aprendizagens, portfólios e projetos finais.</p></div></div>
+  </div>
+
+  <h3 class="sub azul">Temas transversais</h3>
+  <div class="duas">
+    <ul class="marcada azul">
+      <li>O que é inovação na educação e como se diferencia de modismo.</li>
+      <li>Para que serve a inovação: impacto social, desenvolvimento de competências e transformação institucional.</li>
+      <li>Crítica à banalização do termo "inovação" em contextos educacionais.</li>
+      <li>Requisitos para inovação educacional genuína: intencionalidade, sustentabilidade e inclusão.</li>
+      <li>Abordagens matéticas: aprender a aprender, autonomia e responsabilidade.</li>
+    </ul>
+    <ul class="marcada laranja">
+      <li>Inovação em alfabetização e letramento.</li>
+      <li>Inovação em educação inclusiva.</li>
+      <li>Avaliação formativa e inovadora.</li>
+      <li>Tecnologia e inovação em educação.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =================== REFERÊNCIAS =================== -->
+<section class="painel" id="p-referencias" role="tabpanel" aria-labelledby="t-referencias" hidden>
+  <h2 class="secao">Referências bibliográficas</h2>
+
+  <h3 class="sub azul">Livros</h3>
+  <ol class="refs">
+    <li><strong>MORAN, José; BACICH, Lilian.</strong> Metodologias ativas para uma educação inovadora: uma abordagem teórico-prática. Porto Alegre: Artmed, 2017.</li>
+    <li><strong>FILATRO, Andrea; CAVALCANTI, Carolina Costa.</strong> Metodologias inov-ativas. 2. ed. São Paulo: Saraiva, 2023.</li>
+    <li><strong>ANDRÉ, Marli.</strong> Práticas inovadoras na formação de professores. Campinas: Papirus, 2016.</li>
+    <li><strong>CAMARGO, Fausto; DAROS, Thuinie.</strong> A sala de aula inovadora: estratégias pedagógicas para fomentar o aprendizado ativo. Porto Alegre: Artmed, 2018.</li>
+    <li><strong>CAMPOS, Flavio Rodrigues; BLIKSTEIN, Paulo.</strong> Inovações radicais na educação brasileira. São Paulo: Penso, 2019.</li>
+    <li><strong>CARVALHO, Frank Viana; ANDRADE NETO, Manoel.</strong> Metodologias ativas: aprendizagem cooperativa, PBL e pedagogia de projetos. São Paulo: República do Livro, 2019.</li>
+    <li><strong>RIBEIRO, Andréia.</strong> Educação e inovação. São Paulo: Freitas Bastos, 2023.</li>
+    <li><strong>MONTEIRO, Patrícia et al.</strong> Metodologias ativas e as tecnologias educacionais: conceitos e práticas. Rio de Janeiro: Alta Books, 2017.</li>
+  </ol>
+
+  <h3 class="sub azul">Periódicos</h3>
+  <ol class="refs">
+    <li><strong>Revista Metodologias Ativas e Tecnologias Educacionais</strong> (ISSN 2763-9401). Disponível em: <a href="https://mativas.com.br/revista/" target="_blank" rel="noopener">https://mativas.com.br/revista/</a></li>
+  </ol>
+
+  <h2 class="secao" style="margin-top:42px">Levantamento bibliográfico</h2>
+  <p class="intro">Além das referências de livros, a disciplina inclui leitura e análise de artigos científicos sobre metodologias inovadoras. Os estudantes deverão consultar periódicos especializados e bases de dados acadêmicas.</p>
+
+  <div class="tres">
+    <div>
+      <h3 class="sub azul">Periódicos recomendados</h3>
+      <ul class="marcada azul">
+        <li>Revista Metodologias Ativas e Tecnologias Educacionais</li>
+        <li>Revista Brasileira de Educação</li>
+        <li>Educação &amp; Realidade</li>
+        <li>Cadernos de Pesquisa</li>
+        <li>Revista de Educação PUC-Campinas</li>
+        <li>Ensaio: Avaliação e Políticas Públicas</li>
+        <li>Revista Ibero-Americana de Estudos em Educação</li>
+        <li>Journal of Educational Innovation (internacional)</li>
+        <li>Computers &amp; Education (internacional)</li>
+        <li>Learning, Culture and Social Interaction (internacional)</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sub laranja">Bases de dados</h3>
+      <ul class="marcada laranja">
+        <li>SciELO Brasil (acesso aberto)</li>
+        <li>Google Scholar</li>
+        <li>CAPES Periódicos (acesso institucional)</li>
+        <li>ResearchGate</li>
+        <li>Academia.edu</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sub rosa">Palavras-chave para busca</h3>
+      <ul class="marcada rosa">
+        <li>Metodologias ativas; aprendizagem ativa</li>
+        <li>Inovação educacional; inovação pedagógica</li>
+        <li>Aprendizagem colaborativa e cooperativa</li>
+        <li>Design Thinking; pensamento criativo</li>
+        <li>Gamificação; jogos educacionais</li>
+        <li>Alfabetização; letramento</li>
+        <li>Educação inclusiva; acessibilidade</li>
+        <li>Avaliação formativa e inovadora</li>
+        <li>Pedagogia de projetos</li>
+        <li>Aprendizagem criativa</li>
+        <li>Matética; aprender a aprender</li>
+        <li>Educação transformadora; educação crítica</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="barra-gradiente"></div>
+<footer>
+  <p><strong>Metodologias inovadoras para a aprendizagem</strong> &nbsp;·&nbsp; Profa. Mary Grace Pereira Andrioli &nbsp;·&nbsp; <a href="mailto:maryg@ifsp.edu.br" style="color:var(--teal)">maryg@ifsp.edu.br</a></p>
+  <p>Período: 31 de julho a 13 de novembro de 2026 &nbsp;·&nbsp; 20 encontros &nbsp;·&nbsp; 76 aulas de 50 minutos (63,3 h)</p>
+</footer>
+
+<script>
+(function(){
+  var abas = Array.prototype.slice.call(document.querySelectorAll('.aba'));
+  var paineis = abas.map(function(a){ return document.getElementById(a.getAttribute('aria-controls')); });
+
+  function ativar(i, foco){
+    abas.forEach(function(a, j){
+      a.setAttribute('aria-selected', j === i ? 'true' : 'false');
+      paineis[j].hidden = j !== i;
+    });
+    if (foco) abas[i].focus();
+    abas[i].scrollIntoView({block:'nearest', inline:'nearest'});
+    window.scrollTo({top:0, behavior:'smooth'});
+    if (history.replaceState) history.replaceState(null, '', '#' + abas[i].getAttribute('aria-controls'));
+  }
+
+  abas.forEach(function(a, i){
+    a.addEventListener('click', function(){ ativar(i, false); });
+    a.addEventListener('keydown', function(e){
+      var n = null;
+      if (e.key === 'ArrowRight') n = (i + 1) % abas.length;
+      if (e.key === 'ArrowLeft')  n = (i - 1 + abas.length) % abas.length;
+      if (e.key === 'Home') n = 0;
+      if (e.key === 'End')  n = abas.length - 1;
+      if (n !== null){ e.preventDefault(); ativar(n, true); }
+    });
+  });
+
+  var hash = window.location.hash.replace('#','');
+  if (hash){
+    var idx = paineis.findIndex(function(p){ return p.id === hash; });
+    if (idx > -1) ativar(idx, false);
+  }
+})();
+</script>
+</body>
+</html>
