@@ -148,6 +148,7 @@ p.intro{color:var(--texto);max-width:62em;margin:0 0 22px}
 .encontro.online{background:var(--card-azul);border-left-color:var(--azul)}
 .encontro.extensao{background:var(--card-teal);border-left-color:var(--teal)}
 .encontro.especial{background:var(--card-roxo);border-left-color:var(--roxo)}
+.encontro.cancelada{background:var(--fundo-alt);border-left-color:var(--cinza)}
 .encontro-topo{margin-bottom:9px}
 .etiquetas{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
 .data{display:block;font-size:1.05rem;font-weight:800;color:var(--laranja)}
@@ -155,11 +156,15 @@ p.intro{color:var(--texto);max-width:62em;margin:0 0 22px}
 .encontro.online .data{color:var(--azul)}
 .encontro.extensao .data{color:var(--teal)}
 .encontro.especial .data{color:var(--roxo)}
+.encontro.cancelada .data{color:var(--cinza)}
+.encontro.cancelada h4{color:var(--cinza)}
 .tag{
   font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
   color:#fff;padding:4px 9px;border-radius:4px;
 }
 .tag.avaliativa{background:var(--rosa)}
+.tag.remota{background:var(--azul-claro)}
+.tag.cancelada{background:var(--cinza)}
 .tag.curricularizacao{background:var(--teal)}
 .tag.cipatec{background:var(--rosa)}
 .tag.pedagogia{background:var(--azul)}
@@ -363,7 +368,7 @@ footer strong{color:var(--azul)}
     </article>
     <article class="encontro presencial">
       <div class="encontro-topo"><span class="data">21/08 (sex)</span></div>
-      <h4>Encontro 4: mapeamento de experiências inovadoras no Brasil; análise crítica</h4>
+      <h4>Encontro 4: mapeamento de experiências inovadoras no Brasil; análise crítica. Contribuição no <a href="https://moodle.srq.ifsp.edu.br/mod/forum/view.php?id=146884" target="_blank" rel="noopener">fórum da disciplina no Moodle</a></h4>
     </article>
     <article class="encontro especial">
       <div class="encontro-topo"><span class="data">28/08 (sex) e 29/08 (sáb)</span><span class="etiquetas"><span class="tag campus">Campus Aberto</span><span class="tag curricularizacao">Curricularização da extensão</span></span></div>
@@ -375,39 +380,39 @@ footer strong{color:var(--azul)}
   <div class="grade">
     <article class="encontro presencial">
       <div class="encontro-topo"><span class="data">04/09 (sex)</span></div>
-      <h4>Encontro 7: inovação em alfabetização e letramento; educação inclusiva. Vivência 1: Design Thinking aplicado à educação</h4>
+      <h4>Encontro 7: sistematização de propostas desenvolvidas para a Cipatec</h4>
     </article>
-    <article class="encontro presencial">
-      <div class="encontro-topo"><span class="data">11/09 (sex)</span></div>
-      <h4>Encontro 8: jogos e brincadeiras cooperativas. Aniversário da professora</h4>
+    <article class="encontro cancelada">
+      <div class="encontro-topo"><span class="data">11/09 (sex)</span><span class="etiquetas"><span class="tag cancelada">Aula cancelada</span></span></div>
+      <h4>Encontro 8: aula cancelada por motivo das condições climáticas</h4>
     </article>
     <article class="encontro presencial">
       <div class="encontro-topo"><span class="data">18/09 (sex)</span></div>
-      <h4>Encontro 9: leitura em equipes, análise crítica de referencial teórico e artigos científicos</h4>
+      <h4>Encontro 9: apresentação dialogada sobre metodologias ativas/inovadoras. Levantamento de propostas já identificadas pelas equipes; formação de grupos e levantamento de leituras/referencial teórico. Proposta comum: como desenvolver metodologias inovadoras para letramento e alfabetização?</h4>
     </article>
     <article class="encontro avaliativa">
-      <div class="encontro-topo"><span class="data">25/09 (sex)</span><span class="etiquetas"><span class="tag avaliativa">Avaliativa</span></span></div>
-      <h4>Encontro 10: produção escrita individual, reflexão crítica sobre inovação em contexto específico</h4>
+      <div class="encontro-topo"><span class="data">25/09 (sex)</span><span class="etiquetas"><span class="tag avaliativa">Avaliativa</span><span class="tag remota">Remota</span></span></div>
+      <h4>Encontro 10: atividade avaliativa parcial remota: envio individual do link do portfólio em andamento e atualização das atividades/pendências no ambiente Moodle</h4>
     </article>
   </div>
 
   <div class="mes">Outubro</div>
   <div class="grade">
-    <article class="encontro extensao">
-      <div class="encontro-topo"><span class="data">02/10 (sex)</span><span class="etiquetas"><span class="tag curricularizacao">Curricularização da extensão</span></span></div>
-      <h4>Encontro 11: visita técnica a escola, identificação e análise de práticas inovadoras</h4>
+    <article class="encontro presencial">
+      <div class="encontro-topo"><span class="data">02/10 (sex)</span></div>
+      <h4>Encontro 11: apresentação das atividades em andamento. Discussão sobre experiências inovadoras na área de educação (a partir das publicações no ambiente Moodle). Inovação em alfabetização e letramento; educação inclusiva. Vivência 1: Design Thinking aplicado à educação</h4>
     </article>
-    <article class="encontro extensao">
-      <div class="encontro-topo"><span class="data">02 a 06/10</span><span class="etiquetas"><span class="tag curricularizacao">Curricularização da extensão</span></span></div>
-      <h4>Encontros 12 e 13: atividade extra durante o dia, curricularização da extensão (visita, observação e análise)</h4>
+    <article class="encontro especial">
+      <div class="encontro-topo"><span class="data">02 a 06/10</span><span class="etiquetas"><span class="tag cipatec">Semana Cipatec</span><span class="tag pedagogia">Semana da Pedagogia</span><span class="tag curricularizacao">Curricularização da extensão</span></span></div>
+      <h4>Encontros 12 e 13: atividade extra durante o dia, curricularização da extensão (visita, observação e análise). Mostra de Ciência no Recanto da Cascata (exposição de jogos, brincadeiras e outros; visita aos espaços e escolas)</h4>
     </article>
     <article class="encontro presencial">
       <div class="encontro-topo"><span class="data">09/10 (sex)</span></div>
-      <h4>Encontro 14: vivência 2, aprendizagem cooperativa, gamificação e avaliação formativa</h4>
+      <h4>Encontro 14: vivência de aprendizagem cooperativa, gamificação e avaliação formativa</h4>
     </article>
-    <article class="encontro especial">
-      <div class="encontro-topo"><span class="data">14 a 18/10</span><span class="etiquetas"><span class="tag cipatec">Semana Cipatec</span><span class="tag pedagogia">Semana da Pedagogia</span><span class="tag curricularizacao">Curricularização da extensão</span></span></div>
-      <h4>Encontros 15 e 16: palestras, oficinas e mediação de roda de conversa com educadores/as inovadores/as</h4>
+    <article class="encontro extensao">
+      <div class="encontro-topo"><span class="data">14 a 18/10</span><span class="etiquetas"><span class="tag curricularizacao">Curricularização da extensão</span></span></div>
+      <h4>Encontros 15 e 16: visita a escola e/ou visita técnica. Compartilhamento, mediação e devolutivas sobre materiais pedagógicos desenvolvidos</h4>
     </article>
     <article class="encontro presencial">
       <div class="encontro-topo"><span class="data">23/10 (sex)</span></div>
@@ -439,10 +444,11 @@ footer strong{color:var(--azul)}
         <tr><th scope="col">Categoria</th><th scope="col">Quantidade</th><th scope="col">Observações</th></tr>
       </thead>
       <tbody>
-        <tr><td>Encontros presenciais em sala</td><td class="num">14</td><td>Sextas-feiras regulares</td></tr>
-        <tr><td>Atividades externas</td><td class="num">3</td><td>Campus Aberto, visita técnica, Semana Cipatec e da Pedagogia</td></tr>
-        <tr><td>Encontros online</td><td class="num">2</td><td>Novembro (seminário e avaliação coletiva)</td></tr>
-        <tr><td>Atividades avaliativas</td><td class="num">2</td><td>Setembro (produção escrita) e novembro (coletiva)</td></tr>
+        <tr><td>Encontros presenciais em sala</td><td class="num">10</td><td>Sextas-feiras regulares</td></tr>
+        <tr><td>Atividades externas</td><td class="num">6</td><td>3 eventos: Campus Aberto (28 a 29/08), Semana Cipatec e da Pedagogia (02 a 06/10) e curricularização da extensão com visita técnica (14 a 18/10)</td></tr>
+        <tr><td>Aula cancelada</td><td class="num">1</td><td>11/09, por motivo das condições climáticas</td></tr>
+        <tr><td>Encontro online</td><td class="num">1</td><td>Novembro (seminário de apresentação)</td></tr>
+        <tr><td>Atividades avaliativas</td><td class="num">2</td><td>Setembro (parcial remota) e novembro (coletiva, online)</td></tr>
         <tr class="total"><td>Total</td><td class="num">20</td><td>76 aulas de 50 min, equivalentes a 63,3 h</td></tr>
       </tbody>
     </table>
@@ -456,14 +462,14 @@ footer strong{color:var(--azul)}
 
   <div class="cartoes">
     <article class="cartao borda-teal">
-      <h4>Produção escrita</h4>
+      <h4>Atividade avaliativa parcial remota</h4>
       <p class="legenda">Setembro</p>
       <dl>
         <div class="campo"><dt>Data</dt><dd>25/09</dd></div>
-        <div class="campo"><dt>Formato</dt><dd>Individual</dd></div>
-        <div class="campo"><dt>Objetivo</dt><dd>Reflexão crítica e fundamentada sobre inovação em contexto educacional específico.</dd></div>
-        <div class="campo"><dt>Produtos esperados</dt><dd>Ensaio ou relatório crítico (3 a 5 páginas).</dd></div>
-        <div class="campo"><dt>Critérios</dt><dd>Fundamentação teórica, análise crítica, clareza argumentativa e articulação com as leituras da disciplina.</dd></div>
+        <div class="campo"><dt>Formato</dt><dd>Individual, remota</dd></div>
+        <div class="campo"><dt>Objetivo</dt><dd>Acompanhamento do andamento do portfólio e das atividades da disciplina.</dd></div>
+        <div class="campo"><dt>Produtos esperados</dt><dd>Envio individual do link do portfólio em andamento e atualização das atividades/pendências no ambiente Moodle.</dd></div>
+        <div class="campo"><dt>Critérios</dt><dd>Atualização e organização do portfólio, cumprimento das pendências e clareza no registro das atividades.</dd></div>
       </dl>
     </article>
     <article class="cartao borda-rosa">
